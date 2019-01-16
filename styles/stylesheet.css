@@ -1,0 +1,68 @@
+#h1{
+    font: 800;
+    color: blue
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #6ed1ef;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+.main{
+    font-family: 'Slabo 27px', serif;
+  background-color: #c3dae1;  
+  height: 2000px
+}
+
+.logo{
+    float: left;
+}
+
+.searchbar{
+
+    display: flex;
+justify-self: center;
+
+}
+
+/* Large */
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+  }
+  
+  /* Medium screens */
+  @media all and (max-width: 800px) {
+    .navbar {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+  }
+  
+  /* Small screens */
+  @media all and (max-width: 500px) {
+    .navbar {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
