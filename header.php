@@ -6,32 +6,37 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/stylesheet.css" />
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-    <script src="main.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 </head>
 <body class= main>
 
-<div class=navbar> 
+<header>
 
-<div>
+<img  src="img/logo.png" height="90"alt="logo" class="logo">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<form class="search-form" action="" method="post">
+  <input type="search" placeholder="search" id="search" name="search" class="search">
+  <button type="submit" value="search"> <i class="fa fa-search"></i> </button>
+</form>
 
-<img class=logo src="https://via.placeholder.com/92" alt="">
-<a><h3>Home</h3></a>
-<a><h3>Games</h3></a>
-<a><h3>Consoles</h3></a>
+<nav>
+  <ul>
 
-</div>
+    <li><a href="index.php">Home</a>
+    <li><a href="">Games</a>
+    <li><a href="">Consoles</a>
+    <li><a href="">Cart</a>
+    <li><a href="login.php">Login</a>
 
-<div class=searchbar>
 
-<h1>
+  </ul>
+</nav>
 
-Search bar
+<label for="nav-toggle" class="nav-toggle-label">
 
-</h1>
-</div>
+<span></span>
 
-</div>
+</label>
 
-</body>
-</html>
+</header>
