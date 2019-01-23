@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+p {
+  font-size: .8em;
+}
+
 body {
   margin: 0;
   background: #c7dbe2;
@@ -37,6 +41,8 @@ body {
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  width: 400px;
+  height: 700px;
 }
 
 .title {
