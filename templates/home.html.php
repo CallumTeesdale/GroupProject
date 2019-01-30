@@ -1,9 +1,3 @@
-<?php
-
-require 'header.php';
-
-?>
-
 <div class="title">
 
   <h1> Welcome to Northampton Gaming</h1>
@@ -42,9 +36,3 @@ require 'header.php';
   </div>
 
 </div>
-
-<?php
-
-require 'footer.php';
-
- ?>
