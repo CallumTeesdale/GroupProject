@@ -6,6 +6,7 @@
     <title><?=$title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/stylesheet.css" />
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 </head>
@@ -13,7 +14,8 @@
 
 <header>
 
-<img  src="img/logo.png" height="90"alt="logo" class="logo">
+<a href="index.php" class="logo"> <img src="img/logo.png" height="90"alt="logo" class="logo"></a>
+
 <input type="checkbox" id="nav-toggle" class="nav-toggle">
 <form class="search-form" action="" method="post">
   <input type="search" placeholder="search" id="search" name="search" class="search">
