@@ -44,6 +44,7 @@
 </label>
 
 </header>
+<body>
 <?=$output?>
 </body>
 <footer>
