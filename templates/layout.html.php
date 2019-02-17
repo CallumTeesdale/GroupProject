@@ -6,9 +6,9 @@
     <title><?=$title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
+    <link rel="icon" type="image/png" href="../public/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../public/img/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 </head>
