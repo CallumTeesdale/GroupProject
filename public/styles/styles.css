@@ -1,19 +1,21 @@
 :root {
-  --background: rgba(125, 210, 241, .85);
+  --background: rgba(125, 210, 241, 0.85);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 p {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 body {
   margin: 0;
   background: #c7dbe2;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-weight: 400;
 }
 
@@ -56,7 +58,7 @@ header {
   text-align: center;
   position: fixed;
   z-index: 999;
-  width: 100%
+  width: 100%;
 }
 
 /* Hamburger menu */
@@ -66,8 +68,8 @@ header {
   left: -9999px !important;
 }
 
-.nav-toggle:focus~.nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, 0.75);
 }
 
 .nav-toggle-label {
@@ -93,7 +95,7 @@ header {
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -141,37 +143,37 @@ nav a:hover {
   color: black;
 }
 
-.nav-toggle:checked~nav {
+.nav-toggle:checked ~ nav {
   transform: scale(1, 1);
 }
 
-.nav-toggle:checked~nav a {
+.nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
-.succesfulCheckoutWrapper{
+.succesfulCheckoutWrapper {
   text-align: center;
 }
-.succesfulImageWrapper{
+.succesfulImageWrapper {
   padding-top: 160px;
   display: inline-block;
   padding-bottom: 20px;
 }
-.succesfulImage{
+.succesfulImage {
   max-width: 1407px;
   width: 100%;
   max-height: 506px;
 }
 
-.failedCheckoutWrapper{
+.failedCheckoutWrapper {
   text-align: center;
 }
-.failedImageWrapper{
+.failedImageWrapper {
   padding-top: 160px;
   display: inline-block;
   padding-bottom: 20px;
 }
-.failImage{
+.failImage {
   max-width: 1407px;
   width: 100%;
   max-height: 506px;
@@ -179,8 +181,6 @@ nav a:hover {
 
 /* Full screen */
 @media screen and (min-width: 1310px) {
-
-
   .nav-toggle-label {
     display: none;
   }
@@ -231,7 +231,7 @@ nav a:hover {
   }
 
   nav a::before {
-    content: '';
+    content: "";
     display: block;
     height: 5px;
     background: black;
@@ -252,7 +252,7 @@ nav a:hover {
     justify-self: center;
     width: 40px;
     height: 40px;
-    background: #2196F3;
+    background: #2196f3;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -288,7 +288,7 @@ nav a:hover {
 
   footer a {
     color: white;
-    text-decoration: none
+    text-decoration: none;
   }
 
   footer a:visited {
@@ -312,7 +312,7 @@ form.login-form button {
   justify-self: center;
   width: 40px;
   height: 40px;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
