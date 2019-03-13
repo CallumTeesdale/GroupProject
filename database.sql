@@ -94,7 +94,8 @@ CREATE TABLE `games` (
   `release_date` date DEFAULT NULL,
   `metacritic_score` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
-  `game_image` blob,
+  `game_image` longblob,
+  `trailer_link` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`game_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -165,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-13 12:42:50
+-- Dump completed on 2019-03-13 12:45:28
