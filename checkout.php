@@ -10,6 +10,7 @@ use PayPal\Api\Payment;
 require 'paypal.php';
 
 if (!isset($_GET['product'], $_GET['price'])) {
+  echo "set get prodcut and get price product";
   die;
 }
 $product=$_GET['product'];

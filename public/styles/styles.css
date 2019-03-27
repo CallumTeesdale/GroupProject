@@ -161,8 +161,43 @@ nav a:hover {
 }
 .succesfulImage {
   max-width: 1407px;
+
   width: 100%;
   max-height: 506px;
+}
+.succesfulTextWrapper{
+  padding-top: 30px;
+  max-width:1407px;
+  width:100%;
+  display: inline-block;
+  padding-bottom: 20px;
+
+}
+.succesfulText{
+  max-width: 1407px;
+  width: 100%;
+  background-color: rgb(225, 232, 242);
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+}
+.failedTextWrapper{
+  padding-top: 30px;
+  max-width:1407px;
+  width:100%;
+  display: inline-block;
+  padding-bottom: 20px;
+
+}
+.failedText{
+  max-width: 1407px;
+  width: 100%;
+  background-color:rgb(237, 241, 247);
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
 }
 
 .failedCheckoutWrapper {
@@ -178,9 +213,86 @@ nav a:hover {
   width: 100%;
   max-height: 506px;
 }
-
+.searchWrapper{
+  padding-top: 93px;
+}
+.searchTop{
+  height: 20%;
+  min-width: 100%;
+  background-color:rgb(155, 155, 155);
+  text-align: center;
+}
+.searchLeft{
+  width: 15%;
+  height:2000px;
+  background-color:rgb(155, 155, 155);
+  float: left;
+}
+.searchRight{
+  display: flex;
+  float: left;
+  width: 85%;
+}
+.contentSearch{
+  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  height: 100%;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+.index_games_search{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+  height: 700px;
+}
 /* Full screen */
 @media screen and (min-width: 1310px) {
+  .searchWrapper{
+    padding-top: 73px;
+  }
+  .searchTop{
+    height: 20%;
+    min-width: 100%;
+    background-color:rgb(155, 155, 155);
+    text-align: center;
+  }
+  .searchLeft{
+    width: 15%;
+    height:2000px;
+    background-color:rgb(155, 155, 155);
+    float: left;
+  }
+  .searchRight{
+    display: flex;
+    float: left;
+    width: 85%;
+  }
+  .contentSearch{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    height: 100%;
+    justify-content: space-evenly;
+    align-content: flex-start;
+  }
+  .index_games_search{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+    height: 700px;
+  }
   .nav-toggle-label {
     display: none;
   }
