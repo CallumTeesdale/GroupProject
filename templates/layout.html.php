@@ -51,7 +51,7 @@
 <div class="copyright">
   &copy; Northampton Gaming 2019
 
-  <a href="../public/admin.php">Admin page</a>
+  <a href="admin.php">Admin page</a>
 
 </div>
 </footer>
