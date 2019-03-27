@@ -214,15 +214,17 @@ nav a:hover {
   max-height: 506px;
 }
 .searchWrapper{
-  padding-top: 93px;
+  padding-top: 100px;
 }
 .searchTop{
+
   height: 20%;
   min-width: 100%;
   background-color:rgb(155, 155, 155);
   text-align: center;
 }
 .searchLeft{
+  padding: 10px;
   width: 15%;
   height:2000px;
   background-color:rgb(155, 155, 155);
