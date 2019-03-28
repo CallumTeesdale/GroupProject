@@ -214,20 +214,21 @@ nav a:hover {
   max-height: 506px;
 }
 .searchWrapper{
-  padding-top: 100px;
+  padding-top: 93px;
 }
 .searchTop{
-
   height: 20%;
   min-width: 100%;
-  background-color:rgb(155, 155, 155);
-  text-align: center;
+  background-color:rgb(144, 152, 155);
+}
+.searchTop h1{
+  color: white;
 }
 .searchLeft{
   padding: 10px;
   width: 15%;
   height:2000px;
-  background-color:rgb(155, 155, 155);
+  background-color:rgb(144, 152, 155);
   float: left;
 }
 .searchRight{
@@ -254,28 +255,53 @@ nav a:hover {
   width: 400px;
   height: 700px;
 }
+
+
+
+
+
+
+
+
+
+
 /* Full screen */
 @media screen and (min-width: 1310px) {
   .searchWrapper{
-    padding-top: 73px;
+    padding-top: 93px;
   }
   .searchTop{
     height: 20%;
     min-width: 100%;
-    background-color:rgb(155, 155, 155);
-    text-align: center;
+    background-color:rgb(144, 152, 155);
+    display: inline-flex;
+    padding-right: 10px;
+    padding-left: 15%;
+    justify-content: space-between;
   }
+  .searchTop h1{
+    color: white;
+    text-align: right;
+    clear: none;
+  }
+
   .searchLeft{
     width: 15%;
     height:2000px;
-    background-color:rgb(155, 155, 155);
-    float: left;
+    background-color:rgb(144, 152, 155);
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchLeft h1{
+    color: white;
+    text-align: center;
   }
   .searchRight{
     display: flex;
     float: left;
     width: 85%;
   }
+
   .contentSearch{
     float: left;
     display: flex;
@@ -371,6 +397,7 @@ nav a:hover {
     font-size: 17px;
     border: 1px solid grey;
     border-left: none;
+    border-radius: 100%;
     /* Prevent double borders */
     cursor: pointer;
   }
