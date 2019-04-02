@@ -13,7 +13,7 @@ if(isset($_SESSION["cart_item"])){
 <tbody>
 <tr>
 <th style="text-align:left;">Name</th>
-<th style="text-align:left;">Platform</th>
+<th style="text-align:left;">item id</th>
 <th style="text-align:right;" width="5%">Quantity</th>
 <th style="text-align:right;" width="10%">Unit Price</th>
 <th style="text-align:right;" width="10%">Price</th>
