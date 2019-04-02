@@ -269,8 +269,7 @@ nav a:hover {
   text-align: center;
   border-style: solid;
   border-width: thin;
-  border-radius: 5px;
-  
+  border-radius: 5px; 
 }
 .cart h2{
   float: right;
