@@ -36,7 +36,7 @@
                     <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
                     <td style="text-align:right;"><?php echo "£ " . $item["price"]; ?></td>
                     <td style="text-align:right;"><?php echo "£ " . number_format($item_price, 2); ?></td>
-                    <td style="text-align:center;"><a href="cart.php?action=remove&id=<?php echo $item["game_id"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
+                    <td style="text-align:center;"><a href="cart.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
                 </tr>
                 <?php
 				$total_quantity += $item["quantity"];
@@ -66,17 +66,19 @@
 </div>
 
 <?php
+//var_dump($_SESSION["cart_item"]);
 if (!empty($_GET["action"])) {
 	switch ($_GET["action"]) {
 		case "remove":
 			if (!empty($_SESSION["cart_item"])) {
 				foreach ($_SESSION["cart_item"] as $k => $v) {
-					if ($_GET["id"] == $k)
-						unset($_SESSION["cart_item"][$k]);
-					header('location: cart.php');
+					if ($_GET["code"] == $k)
+                        unset($_SESSION["cart_item"][$k]);	
+                        header('location: cart.php');			
 					if (empty($_SESSION["cart_item"]))
-						unset($_SESSION["cart_item"]);
-					header('location: cart.php');
+                        unset($_SESSION["cart_item"]);
+                        header('location: cart.php');
+					
 				}
 			}
 			break;
