@@ -30,7 +30,7 @@
     <li><a href="index.php">Home</a>
     <li><a href="">Games</a>
     <li><a href="">Consoles</a>
-    <li><a href="">Cart</a>
+    <li><a href="cart.php">Cart</a>
     <li><a href="login.php">Login</a>
 
 
