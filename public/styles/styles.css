@@ -253,6 +253,44 @@ nav a:hover {
   width: 400px;
   height: 700px;
 }
+.cartWrapper{
+  text-align: center;
+}
+.cart{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1407px;
+  width: 100%;
+  margin-top: 160px;
+  display: inline-block;
+  padding-bottom: 20px;
+  background-color: rgb(237, 241, 247);
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  
+}
+.cart h2{
+  float: right;
+  padding-right: 20px; 
+}
+#btnEmpty{
+  background-color: #ffffff;
+	border: #d00000 1px solid;
+	padding: 5px 10px;
+	color: #d00000;
+	float: right;
+	text-decoration: none;
+	border-radius: 3px;
+	margin: 10px 0px;
+}
+
+.emptyCart{
+  max-width: 1407px;
+  width: 100%;
+}
 
 /* Full screen */
 @media screen and (min-width: 1310px) {
