@@ -11,6 +11,7 @@ $payerId = $_GET['PayerID'];
 $token = $_GET['token'];
 
 $payment = Payment::get($paymentId, $paypal);
+//print_r($payment);
 
 $execute = new PaymentExecution();
 $execute->setPayerId($payerId);
@@ -33,4 +34,9 @@ echo "payment made";
         </div>
     </div>
 </div> 
-
+<?php 
+$jsonResult = $result->toJSON();
+$json = json_decode($jsonResult, true);
+$city = $json['payer']['payer_info']['shipping_address']['city'];
+echo $city;
+?>
