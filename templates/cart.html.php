@@ -30,7 +30,7 @@
 					$item_price = $item["quantity"] * $item["price"];
 					?>
                 <tr>
-                    <td><img src="data:image/jpeg;base64,<?= base64_encode($item['image']) ?>" class="cart-item-image" /><?= $item["game_title"] ?></td>
+                    <td><img src="data:image/jpeg;base64,<?= base64_encode($item['image']) ?>" class="cart-item-image" /><a href="game.php?code=<?=$item['code']?>"><?= $item["game_title"] ?></a></td>
                     <td style="text-align:right;"><?php echo $item["platform"]; ?></td>
                     <td><?php echo $item["code"]; ?></td>
                     <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
