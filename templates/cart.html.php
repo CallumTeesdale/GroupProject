@@ -19,7 +19,7 @@
                 <tr>
                     <th style="text-align:left;">Name</th>
                     <th style="text-align:left;">Platform</th>
-                    <th style="text-align:left;">item id</th>
+                    <th style="text-align:left;">Code</th>
                     <th style="text-align:right;" width="5%">Quantity</th>
                     <th style="text-align:right;" width="10%">Unit Price</th>
                     <th style="text-align:right;" width="10%">Price</th>
@@ -32,7 +32,7 @@
                 <tr>
                     <td><img src="data:image/jpeg;base64,<?= base64_encode($item['image']) ?>" class="cart-item-image" /><?= $item["game_title"] ?></td>
                     <td style="text-align:right;"><?php echo $item["platform"]; ?></td>
-                    <td><?php echo $item["game_id"]; ?></td>
+                    <td><?php echo $item["code"]; ?></td>
                     <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
                     <td style="text-align:right;"><?php echo "£ " . $item["price"]; ?></td>
                     <td style="text-align:right;"><?php echo "£ " . number_format($item_price, 2); ?></td>

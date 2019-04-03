@@ -318,12 +318,14 @@ nav a:hover {
 }
 
 .btnAddAction {
-  padding: 5px 10px;
-  margin-left: 5px;
-  background-color: #efefef;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: lightblue;
   border: #e0e0e0 1px solid;
-  color: #211a1a;
-  float: right;
+  color: white;
+  font-family: "Bitter", serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #000000;
   text-decoration: none;
   border-radius: 3px;
   cursor: pointer;
@@ -346,10 +348,6 @@ nav a:hover {
   font-weight: normal;
 }
 
-
-.cart-action {
-  float: right;
-}
 
 .product-quantity {
   padding: 5px 10px;
