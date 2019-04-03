@@ -49,7 +49,7 @@
 
         <div class="search">
             <form class="search-form" action="" method="post">
-                <input type="text" autocomplete="off" placeholder="Search..." />
+                <input type="text" autocomplete="off" placeholder="Search..." name="term"/>
                 <button type="submit" value="search"> <i class="fa fa-search"></i> </button>
                 <div class="result"></div>
             </form>

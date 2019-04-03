@@ -365,8 +365,8 @@ nav a:hover {
   vertical-align: middle;
   margin-right: 15px;
 }
-.result{
-
+.result p:hover{
+background-color: lightblue;
 }
 .result p{
   margin: 0;
@@ -509,9 +509,15 @@ nav a:hover {
     font-size: 17px;
     border: 1px solid grey;
     border-left: none;
-    border-radius: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
     /* Prevent double borders */
     cursor: pointer;
+  }
+  form.search-form input[type=text]{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
   }
 
   form.search-form button:hover {
