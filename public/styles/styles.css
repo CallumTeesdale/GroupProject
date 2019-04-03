@@ -174,13 +174,13 @@ nav a:hover {
 }
 .succesfulText {
   max-width: 1407px;
-  width: 100%;
   background-color: rgb(225, 232, 242);
   text-align: center;
   border-style: solid;
   border-width: thin;
   border-radius: 5px;
 }
+
 .failedTextWrapper {
   padding-top: 30px;
   max-width: 1407px;
