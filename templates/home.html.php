@@ -15,9 +15,10 @@ $games->execute();
     <div class="index_games">
         <img src="data:image/jpeg;base64,<?= base64_encode($game['game_image']) ?>" width="200" height="200" alt="" class="logo" />
         <h4><?= $game['game_title'] ?></h4>
-        <p>~300 characters of text</p>
+        <p><?= $game['game_description'] ?></p>
+        <a href="login.php">More</a>
         <form method="post" action="index.php?action=add&code=<?=$game['code']?>">
-            <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Add to Cart" class="btnAddAction" /></div>
+        <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Add to Cart" class="btnAddAction" /></div>
     
     </form>
     </div>

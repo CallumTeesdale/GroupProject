@@ -12,20 +12,52 @@
     <link rel="icon" type="image/png" href="../public/img/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.search input[type="text"]').on("keyup input", function() {
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result");
+                if (inputVal.length) {
+                    $.get("/templates/backend-search.php", {
+                        term: inputVal
+                    }).done(function(data) {
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else {
+                    resultDropdown.empty();
+                }
+            });
+
+            // Set search input value on click of result item
+            $(document).on("click", ".result p", function() {
+                $(this).parents(".search").find('input[type="text"]').val($(this).text());
+                $(this).parent(".result").empty();
+            });
+        });
+    </script>
 </head>
 
 <body class=main>
+
 
     <header>
 
         <a href="index.php" class="logo"> <img src="img/logo.png" height="90" alt="logo" class="logo"></a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <form class="search-form" action="" method="post">
-            <input type="search" placeholder="search" id="search" name="search" class="search">
-            <button type="submit" value="search"> <i class="fa fa-search"></i> </button>
-        </form>
 
+        <div class="search">
+            <form class="search-form" action="" method="post">
+                <input type="text" autocomplete="off" placeholder="Search..." />
+                <button type="submit" value="search"> <i class="fa fa-search"></i> </button>
+                <div class="result"></div>
+            </form>
+        </div>
         <nav>
             <ul>
 
@@ -49,6 +81,7 @@
 
     <body>
         <?= $output ?>
+
     </body>
     <footer>
         <div class="copyright">
@@ -57,4 +90,4 @@
             <a href="admin.php">Admin page</a>
 
         </div>
-    </footer> 
+    </footer>

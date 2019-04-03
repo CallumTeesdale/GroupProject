@@ -367,6 +367,17 @@ nav a:hover {
   vertical-align: middle;
   margin-right: 15px;
 }
+.result{
+
+}
+.result p{
+  margin: 0;
+  padding: 7px 10px;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  border-top: none;
+  cursor: pointer;
+}
 
 /* Full screen */
 @media screen and (min-width: 1310px) {
