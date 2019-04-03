@@ -21,7 +21,6 @@ try {
 } catch (Exception $e) {
     die;
 }
-echo "payment made";
 ?>
 <div class="succesfulCheckoutWrapper">
     <div class="succesfulImageWrapper">
