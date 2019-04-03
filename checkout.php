@@ -1,4 +1,5 @@
 <?php
+session_start();
 use PayPal\Api\Payer;
 use PayPal\Api\Item;
 use PayPal\Api\ItemList;
@@ -9,26 +10,31 @@ use PayPal\Api\RedirectUrls;
 use PayPal\Api\Payment;
 require 'paypal.php';
 
-if (!isset($_GET['product'], $_GET['price'])) {
+if (!isset($_SESSION['cart_item'])) {
   echo "set get prodcut and get price product";
   die;
 }
-$product=$_GET['product'];
-$price=$_GET['price'];
 $shipping=2.00;
-$total=$price+$shipping;
+$total=0;
+$price=0;
 
 $payer = new Payer();
 $payer->setPaymentMethod('paypal');
 
-$item = new Item();
-$item->setName($product)
-->setCurrency('GBP')
-->setQuantity(1)
-->setPrice($price);
-
+$items = array();
+$index = 0;
+foreach ($_SESSION['cart_item'] as $item) {
+   $index++;
+   $items[$index] = new Item();
+   $price = $price+$item['price'];
+   $items[$index]->setName($item['game_title'])
+                 ->setCurrency('GBP')
+                 ->setQuantity($item['quantity'])
+                 ->setPrice($item['price']);
+}
+$total=$price+$shipping;
 $itemList = new ItemList();
-$itemList->setItems([$item]);
+$itemList->setItems($items);
 
 $details= new Details();
 $details->setShipping($shipping)
@@ -44,10 +50,9 @@ $transaction->setAmount($amount)
 ->setItemList($itemList)
 ->setDescription('NGS')
 ->setInvoiceNumber(uniqid());
-
 $redirectUrls = new RedirectUrls;
-$redirectUrls->setReturnUrl('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/public/succesfulCheckout.php')
-->setCancelUrl('http://'. $_SERVER['HTTP_HOST'].'/myphp/public/failedCheckout.php');
+$redirectUrls->setReturnUrl('http://localhost:8080/public/succesfulCheckout.php')
+->setCancelUrl('http://localhost:8080/public/failedCheckout.php');
 
 $payment = new Payment();
 $payment->setIntent('sale')

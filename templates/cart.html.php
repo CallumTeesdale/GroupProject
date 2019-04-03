@@ -52,6 +52,9 @@
                 </tr>
             </tbody>
         </table>
+        <a id="btnCheckout" href="../checkout.php">
+            <h2>Checkout</h2>
+        </a>
         <?php
 
 	} else {

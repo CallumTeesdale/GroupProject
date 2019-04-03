@@ -1,3 +1,27 @@
+<?php
+use PayPal\Api\Payment;
+use PayPal\Api\PaymentExecution;
+require '../paypal.php';
+if (!isset($_GET['token'],$_GET['paymentId'],$_GET['PayerID'] )){
+die;
+}
+
+$paymentId = $_GET['paymentId'];
+$payerId = $_GET['PayerID'];
+$token = $_GET['token'];
+
+$payment = Payment::get($paymentId, $paypal);
+
+$execute = new PaymentExecution();
+$execute->setPayerId($payerId);
+
+try {
+    $result = $payment->execute($execute, $paypal);
+} catch (Exception $e) {
+    die;
+}
+echo "payment made";
+?>
 <div class="succesfulCheckoutWrapper">
     <div class="succesfulImageWrapper">
         <img src="../public/img/succesfulCheckout.png" class="succesfulImage">
@@ -9,3 +33,4 @@
         </div>
     </div>
 </div> 
+

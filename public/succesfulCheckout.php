@@ -1,5 +1,4 @@
 <?php
-
 require '../loadtemplate.php';
 $title = 'Success';
 $output = loadTemplate('../templates/succesfulCheckout.html.php', []);
