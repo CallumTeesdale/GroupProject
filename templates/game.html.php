@@ -21,6 +21,7 @@ $games->execute();
                                                 <div class="game-image">
                                                     <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/<?= $game['trailer_link'] ?>?autoplay=0" frameborder="0"></iframe>
                                                                                                                     </div>
+
                                                                                                                     <div class="game-right">
                                                                                                                         <div class="game-more">
                                                                                                                             <p><strong>Age: </strong><?= $game['age_rating'] ?></p>
@@ -30,12 +31,13 @@ $games->execute();
                                                                                                                 </div>
                                                                                                             </div>
 
-                                                                                                            <button onclick="myFunction('Specifics')" class="g-button block black">Specifics</button>
-                                                                                                            <div id="Specifics" class="hide accordion-container">
-                                                                                                                <p>Some other text..</p>
-                                                                                                            </div>
+                                            <button onclick="myFunction('Specifics')" class="g-button block black">Specifics</button>
+                                            <div id="Specifics" class="hide accordion-container">
+                                            <p><strong>Publisher: </strong><?= $game['publisher'] ?></p>   
+                                            <p><strong>Publisher: </strong><?= $game['developer'] ?></p>                                                           
+                                            </div>
 
-                                                                                                        </div>
+                                             </div>
                                                                                                                                                                                                         <?php endforeach; ?>
 </div>
 

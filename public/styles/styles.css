@@ -418,6 +418,9 @@ background-color: lightblue;
 .game-more{
   display: inline-block
 }
+#specifics{
+  display: inline-block;
+}
 .g-button {
   border: none;
   vertical-align: middle;
