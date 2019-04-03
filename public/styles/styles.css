@@ -377,6 +377,89 @@ background-color: lightblue;
   cursor: pointer;
 }
 
+.game-wrapper{
+  text-align: center;
+}
+.game-image{
+  padding: 5px;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+}
+.game-right{
+  padding-right: 20px;
+  display: flex;
+  float: right;
+  width: 50%;
+  text-align: left;
+}
+.game-text{
+  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+}
+.game-accordion{
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1407px;
+  width: 100%;
+  margin-top: 160px;
+  display: inline-block;
+  background-color: rgb(237, 241, 247);
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+}
+.game-more{
+  display: inline-block
+}
+.g-button {
+  border: none;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap
+}
+
+.g-button{
+  text-align: center;
+  padding: 8px 16px
+}
+.block {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+}
+.accordion-container:after,.accordion-container:before{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.black{
+  color: #fff!important;
+  background-color: #88d4ef!important
+}
+.hide {
+  display: none!important
+}
+.accordion-show-block,.accordion-show {
+  display: block!important
+}
+.accordion-active{
+  color: #fff!important;
+  background-color: #c7dbe2!important
+}
+
+
 /* Full screen */
 @media screen and (min-width: 1310px) {
   .searchWrapper {
