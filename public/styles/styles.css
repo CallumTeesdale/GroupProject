@@ -325,7 +325,11 @@ nav a:hover {
   color: white;
   font-family: "Bitter", serif;
   font-weight: bold;
-  text-shadow: 1px 1px #000000;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
   text-decoration: none;
   border-radius: 3px;
   cursor: pointer;
@@ -383,6 +387,7 @@ background-color: lightblue;
 .game-image{
   padding: 5px;
   width: 50%;
+  max-height: 500px;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -418,9 +423,6 @@ background-color: lightblue;
 .game-more{
   display: inline-block
 }
-#specifics{
-  display: inline-block;
-}
 .g-button {
   border: none;
   vertical-align: middle;
@@ -432,7 +434,13 @@ background-color: lightblue;
 
 .g-button{
   text-align: center;
-  padding: 8px 16px
+  padding: 8px 16px;
+  font-size: 18px;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 .block {
   display: block;

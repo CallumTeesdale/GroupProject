@@ -1,3 +1,4 @@
+<?php $search = str_replace(array('%', '_'), '', $_POST['term']); ?>
 <div class="searchWrapper">
     <div class="searchTop">
         <h1>PLATFORM </h1>
@@ -13,7 +14,7 @@
         <div class="contentSearch">
             <?php
             require "../database.php";
-            $search = str_replace(array('%', '_'), '', $_POST['term']);
+            
             $sql = "SELECT * FROM games WHERE game_title LIKE :term";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':term', '%' . $search . '%', PDO::PARAM_STR);
@@ -36,6 +37,7 @@
 
                                                                                                             <?php endforeach;
                                                                 } elseif ($stmt->rowCount() <= 0) {
+
                                                                     $games = $pdo->prepare('SELECT * FROM games');
                                                                     $games->execute();
                                                                     foreach ($games as $game) : ?>
