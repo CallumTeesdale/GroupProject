@@ -151,6 +151,10 @@ nav a:hover {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+
+/**
+ * Succesful Checkout styling
+ */
 .succesfulCheckoutWrapper {
   text-align: center;
 }
@@ -181,6 +185,9 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/**
+ * Failed checkout styling
+ */
 .failedTextWrapper {
   padding-top: 30px;
   max-width: 1407px;
@@ -211,6 +218,10 @@ nav a:hover {
   width: 100%;
   max-height: 506px;
 }
+
+/**
+ * Search page styling
+ */
 .searchWrapper {
   padding-top: 93px;
 }
@@ -253,6 +264,10 @@ nav a:hover {
   width: 400px;
   height: 700px;
 }
+
+/**
+ * Cart page styling
+ */
 .cartWrapper {
   text-align: center;
 }
@@ -389,6 +404,10 @@ background-color: lightblue;
   border-top: none;
   cursor: pointer;
 }
+
+/**
+ * Game page styling
+ */
 
 .game-wrapper{
   text-align: center;

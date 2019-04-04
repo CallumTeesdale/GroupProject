@@ -48,7 +48,7 @@ $amount->setCurrency('GBP')
 $transaction = new Transaction();
 $transaction->setAmount($amount)
 ->setItemList($itemList)
-->setDescription('NGS')
+->setDescription('Northampton games')
 ->setInvoiceNumber(uniqid());
 $redirectUrls = new RedirectUrls;
 $redirectUrls->setReturnUrl('http://localhost:8080/public/succesfulCheckout.php')
