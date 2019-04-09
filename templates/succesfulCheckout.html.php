@@ -2,6 +2,7 @@
 use PayPal\Api\Payment;
 use PayPal\Api\PaymentExecution;
 require '../paypal.php';
+
 if (!isset($_GET['token'],$_GET['paymentId'],$_GET['PayerID'] )){
 die;
 }

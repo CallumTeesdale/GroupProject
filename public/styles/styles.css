@@ -184,6 +184,9 @@ nav a:hover {
   border-width: thin;
   border-radius: 5px;
 }
+.invAdd{
+  float: left;
+}
 
 /**
  * Failed checkout styling
@@ -497,6 +500,7 @@ background-color: lightblue;
   color: #fff!important;
   background-color: #c7dbe2!important
 }
+
 
 
 /* Full screen */
