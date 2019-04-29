@@ -57,11 +57,10 @@
         <nav>
             <ul>
 
-                <li><a href="index.php">Home</a>
-                <li><a href="">Games</a>
-                <li><a href="">Consoles</a>
-                <li><a href="cart.php">Cart</a>
-                <li><a href="login.php">Login</a>
+                <li><a href="../public/index.php">Home</a>
+                <li><a href="../public/search.php">Games</a>
+                <li><a href="../public/cart.php">Cart</a>
+                <li><a href="../public/login.php">Login</a>
 
 
             </ul>

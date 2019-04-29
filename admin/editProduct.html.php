@@ -4,7 +4,7 @@ require '../database.php';
 require '../classes/DatabaseTable.php';
 
 
-$databaseTable = new \classes\DatabaseTable($pdo, 'games', 'id');
+$databaseTable = new \classes\DatabaseTable($pdo, 'games', 'game_id');
 $product = $databaseTable->find('game_id', $_GET['id']);
 
 
@@ -14,14 +14,14 @@ if (isset($_POST['submit'])) {
   $date=date_create($_POST['product']['release_date']);
   $formated = date_format($date, "Y/m/d");
   $_POST['product']['release_date'] = $formated;
-  if (isset($_FILES['game_image'])) {
+  if ($_FILES['game_image']["error"] == 0) {
     $image = file_get_contents($_FILES['game_image']['tmp_name']);
     $_POST['product']['game_image'] = $image; 
   }
  
   $product=$_POST['product'];
   $databaseTable->save($product);
-  header('Loaction: /admin/products.php');
+  header('Location: /admin/products.php');
 
 }
 else {
@@ -30,7 +30,8 @@ else {
 <div class="addFormWrapper">
   <div class="addFormTextWrapper">
     <div class="addForm">
-<form action="product.php" method="POST" enctype="multipart/form-data">
+<form action="editProduct.php" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="product[game_id]" value="<?=$product[0]->game_id?>" /><br><br>
 	<label>Game Title:</label>
 	<input type="text" name="product[game_title]" value="<?=$product[0]->game_title?>" /><br><br>
 
@@ -88,10 +89,10 @@ else {
 <input type="text" name="product[code]" value="<?=$product[0]->code?>"/><br><br>
 
 <label>Product Image:</label>
-<input type="file" name="game_image" accept="*/image" />
+<input type="file" name="game_image" accept="*/image" /><br><br>
 
 
-	<input type="submit" name="submit" value="Add" />
+<input type="submit" name="submit" value="Add" />
 </form>
 </div>
 </div>

@@ -4,7 +4,7 @@ require '../database.php';
 require '../classes/DatabaseTable.php';
 
 
-$databaseTable = new \classes\DatabaseTable($pdo, 'games', 'id');
+$databaseTable = new \classes\DatabaseTable($pdo, 'games', 'game_id');
 
 
 
@@ -24,7 +24,7 @@ else {
 <div class="addFormWrapper">
   <div class="addFormTextWrapper">
     <div class="addForm">
-<form action="product.php" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data">
 	<label>Game Title:</label>
 	<input type="text" name="product[game_title]" /><br><br>
 
