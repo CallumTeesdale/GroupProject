@@ -5,14 +5,13 @@ $databaseTableOrders = new \classes\DatabaseTable($pdo, 'orders', 'order_id');
 $databaseTableGames = new \classes\DatabaseTable($pdo, 'games', 'game_id');
 
 $orders = $databaseTableOrders->find('customer_id',$_SESSION['customer_id']);
-$iP=0;
-$iD=0;
-$iG=0;
+
 $games=[];
 ?>
 <div class="game-wrapper">
-<?php foreach ($orders as $order):$codes=unserialize($order->game_codes); ?>
 <div class="game-accordion">
+<?php foreach ($orders as $order):$codes=unserialize($order->game_codes); ?>
+
     <button onclick="myFunction('<?=$order->order_id?>')" class="g-button block black"><?=$order->tracking?> - orderID <?=$order->order_id?></button>
     <div id="<?=$order->order_id?>" class="hide accordion-container">
     <?php for ($i=0; $i < count($codes); $i++):       
@@ -54,13 +53,19 @@ $games=[];
           <p>Shipping: <?=$order->total?></p>
           <p>Total: <?=$order->total?></p>
     </div>
-    
     </div>
+    
+
+
+    
                                                                                                         
 
 <?php endforeach;?>
-
 </div>
+</div>
+    
+
+
 
 
 
