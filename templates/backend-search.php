@@ -9,7 +9,7 @@
         $stmt->execute();
         if($stmt->rowCount() > 0){
             while($row = $stmt->fetch()){?>
-                <p><?=$row['game_title']?></p>
+                <a href="game.php?code=<?=$row['code']?>"><p><?=$row['game_title']?></p></a>
            <?php }
         } else{
             echo "<p>No matches found</p>";

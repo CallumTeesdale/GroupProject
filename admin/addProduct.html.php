@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
   $_POST['product']['game_image'] = $image;
   $product=$_POST['product'];
   $databaseTable->save($product);
-	header('Loaction: /admin/products.php');
+	header('Location: /admin/products.php');
 
 }
 else {
