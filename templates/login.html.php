@@ -31,13 +31,13 @@ if (!isset($_SESSION['logged_in'])) {?>
   </div>
   <ul class="admin">
       <li class="products">
-      <a href="/admin/products.php">
+      <a href="/public/account.php">
 
         <h1>account</h1>
 
       </a>
       </li>
-      <a href="#">
+      <a href="/public/orders.php">
       <li class="users">
       <h1>orders</h1>
       </li>

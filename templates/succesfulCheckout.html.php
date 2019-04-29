@@ -34,7 +34,7 @@ $total = $json['transactions'][0]['amount']['total'];
 $subtotal = $json['transactions'][0]['amount']['details']['subtotal'];
 $shipping = $json['transactions'][0]['amount']['details']['shipping'];
 foreach ($_SESSION['cart_item'] as $item) {
-    $game_codes_arr[] = array($item['code']);
+    $game_codes_arr[] = $item['code'];
 }
 $game_code_str = serialize($game_codes_arr);
 //print_r(unserialize($game_code_str));
