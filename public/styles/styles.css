@@ -222,6 +222,26 @@ nav a:hover {
   max-height: 506px;
 }
 
+.productsWrapper{
+  text-align: center;
+}
+.productsTextWrapper {
+  padding-top: 100px;
+  max-width: 1407px;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.productsText {
+  max-width: 1407px;
+  width: 100%;
+  background-color: rgb(237, 241, 247);
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+}
+
 /**
  * Search page styling
  */

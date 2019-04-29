@@ -8,7 +8,7 @@
 
     <ul class="admin">
       <li class="products">
-      <a href="">
+      <a href="/admin/products.php">
 
         <h1>Products</h1>
 

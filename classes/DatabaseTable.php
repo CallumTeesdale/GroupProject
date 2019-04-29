@@ -4,11 +4,16 @@ class DatabaseTable {
 	private $pdo;
 	private $table;
 	private $primaryKey;
+	private $entityClass;
+	private $entityConstructor;
+	
 
-	public function __construct($pdo, $table, $primaryKey) {
+	public function __construct($pdo, $table, $primaryKey, $entityClass = '\stdclass', $entityConstructor = []) {
 		$this->pdo = $pdo;
 		$this->table = $table;
 		$this->primaryKey = $primaryKey;
+		$this->entityClass = $entityClass;
+        $this->entityConstructor = $entityConstructor;
 	}
 
 	public function find($field, $value) {
@@ -25,6 +30,7 @@ class DatabaseTable {
 
 	public function findAll() {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
+		$stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
 
 		$stmt->execute();
 
