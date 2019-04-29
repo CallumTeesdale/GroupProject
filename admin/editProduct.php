@@ -2,5 +2,5 @@
 require '../loadtemplate.php';
 session_start();
 $title = 'Products';
-$output = loadTemplate('addProduct.html.php', []);
+$output = loadTemplate('editProduct.html.php', []);
 require '../templates/layout.html.php';

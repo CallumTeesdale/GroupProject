@@ -18,10 +18,11 @@ class DatabaseTable {
 
 	public function find($field, $value) {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE ' . $field . ' = :value');
-
+		$stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
 		$criteria = [
 			'value' => $value
 		];
+		
 		$stmt->execute($criteria);
 
 		return $stmt->fetchAll();

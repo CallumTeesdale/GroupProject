@@ -13,9 +13,10 @@ $products=$product;
     <div class="productsTextWrapper">
         <div class="productsText">
         <h2>Products</h2> <a  href="/admin/AddProduct.php">Add new Product</a><br><br>
-        <table>
+        <table class="tbl-cart" cellpadding="10" cellspacing="1">
 				<thead>
 					<tr>
+                        <th style="width: 5%"></th>
 						<th style="width: 10%">Title</th>
 						<th style="width: 10%">Price</th>
                         <th style="width: 10%">Platform</th>
@@ -28,6 +29,7 @@ $products=$product;
 foreach ($products as $p) {
   ?>
 						<tr>
+                            <td><img src="data:image/jpeg;base64,<?= base64_encode($p->game_image) ?>" class="cart-item-image" /></td>
 							<td>
 								<?=$p->game_title?>
 							</td>
@@ -43,8 +45,8 @@ foreach ($products as $p) {
                             <td>
                                 <?=$p->code?>
 							</td>
-							<td><a style="float: right" href="/admin/editProduct.php?id=<?=$p->game_id?>">Edit</a></td>
-							<td><a style="float: right" href="/admin/deleteProduct.php?id=<?=$p->game_id?>">Delete</a></td>
+							<td style="text-align:center;"><a href="products.php?action=edit&id=<?=$p->game_id?>" class="btnRemoveAction"><img src="../public/img/edit.png" width="20" height="20" alt="Edit Item" /></a></td>
+							<td style="text-align:center;"><a href="products.php?action=remove&id=<?=$p->game_id?>" class="btnRemoveAction"><img src="../public/img/icon-delete.png" alt="Remove Item" /></a></td>
 						</tr>
 						<?php
 }
@@ -55,3 +57,16 @@ foreach ($products as $p) {
     </div>
 
 </div> 
+<?php
+if (!empty($_GET["action"])) {
+	switch ($_GET["action"]) {
+        case "remove":
+        $databaseTable->delete($_GET['id']);
+        break;
+        case 'edit':
+            header('Location: /admin/editProduct.php?id='.$_GET['id']);
+            break;			
+			}
+            
+        }
+    

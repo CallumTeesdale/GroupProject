@@ -221,7 +221,9 @@ nav a:hover {
   width: 100%;
   max-height: 506px;
 }
-
+/**
+ * Produc list Styling
+ */
 .productsWrapper{
   text-align: center;
 }
@@ -240,6 +242,42 @@ nav a:hover {
   border-style: solid;
   border-width: thin;
   border-radius: 5px;
+}
+/**
+ * Add product form syling
+ */
+.addFormWrapper{
+  text-align: center;
+}
+.addFormTextWrapper {
+  padding-top: 100px;
+  max-width: 1407px;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.addForm {
+  padding: 2vh;
+  max-width: 1407px;
+  width: 100%;
+  background-color: rgb(237, 241, 247);
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+}
+form.form input.text, form.form textarea.standard, form.form select, form.form input.date { 
+  background-color:#F1F1F1;
+  border:solid 1px #7DD2F1;
+  font-size:13px;
+  color:#000000;
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  border-radius:0px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
 }
 
 /**
