@@ -10,7 +10,7 @@ $product = $databaseTable->find('game_id', $_GET['id']);
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])&& $_SESSION['is_staff']==true) {
   $date=date_create($_POST['product']['release_date']);
   $formated = date_format($date, "Y/m/d");
   $_POST['product']['release_date'] = $formated;
@@ -31,7 +31,7 @@ else {
   <div class="addFormTextWrapper">
     <div class="addForm">
 <form action="editProduct.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="product[game_id]" value="<?=$product[0]->game_id?>" /><br><br>
+  <input type="hidden" name="product[game_id]" value="<?=$product[0]->game_id?>" /><br><br>
 	<label>Game Title:</label>
 	<input type="text" name="product[game_title]" value="<?=$product[0]->game_title?>" /><br><br>
 

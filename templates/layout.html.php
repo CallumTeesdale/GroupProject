@@ -43,7 +43,7 @@
 
     <header>
 
-        <a href="index.php" class="logo"> <img src="../public/img/logo.png" height="90" alt="logo" class="logo"></a>
+        <a href="../public/index.php" class="logo"> <img src="../public/img/logo.png" height="90" alt="logo" class="logo"></a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
@@ -59,8 +59,20 @@
 
                 <li><a href="../public/index.php">Home</a>
                 <li><a href="../public/search.php">Games</a>
+                <?php if (isset($_SESSION['cart_item'])):?>
+                <li><a href="../public/cart.php">Cart(<?=count($_SESSION['cart_item'])?>)</a>
+                <?php else:?>
                 <li><a href="../public/cart.php">Cart</a>
+               <?php endif;?>
+                
+                <?php if (isset($_SESSION['logged_in'])&&!isset($_SESSION['is_staff'])):?>
+                <li><a href="../public/login.php"><?=$_SESSION['username']?></a>
+                <?php elseif (isset($_SESSION['logged_in'])&& $_SESSION['is_staff']==true):?>
+                <li><a href="../admin/admin.php"><?=$_SESSION['username']?></a>
+                <?php else:?>
                 <li><a href="../public/login.php">Login</a>
+               <?php endif;?>
+                
 
 
             </ul>

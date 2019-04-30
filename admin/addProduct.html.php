@@ -8,7 +8,7 @@ $databaseTable = new \classes\DatabaseTable($pdo, 'games', 'game_id');
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])&& $_SESSION['is_staff']==true) {
   $date=date_create($_POST['product']['release_date']);
   $formated = date_format($date, "Y/m/d");
   $_POST['product']['release_date'] = $formated;

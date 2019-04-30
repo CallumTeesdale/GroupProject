@@ -1,7 +1,7 @@
 <?php
 require "../database.php";
 if (isset($_POST['submit'])) {
-  $stmt = $pdo->prepare('SELECT * FROM customers WHERE username = :username');
+  $stmt = $pdo->prepare('SELECT * FROM staff WHERE username = :username');
   $criteria = [
   'username' => $_POST['username']
   ];
@@ -9,12 +9,13 @@ if (isset($_POST['submit'])) {
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   if(password_verify($_POST['password'], $result['password'])){
     $_SESSION['logged_in'] = true;
-    $_SESSION['customer_id'] = $result['customer_id'];
+    $_SESSION['staff_id'] = $result['staff_id'];
     $_SESSION['username'] = $result['username'];
+    $_SESSION['is_staff'] = $result['is_staff'];
     session_write_close();
   }
 }
-if (!isset($_SESSION['logged_in'])) {?>
+if (!isset($_SESSION['logged_in'])&&!isset($_SESSION['is_staff'])) {?>
 <div class="title">
   <h1>Login</h1>
 </div>
@@ -23,28 +24,36 @@ if (!isset($_SESSION['logged_in'])) {?>
 <input type="search" placeholder="Username" id="search" name="username" class="search"><br><br><br>
 <input type="password" placeholder="Password" id="search" name="password" class="search"><br><br><br>
 <input type="submit" name="submit" value="Login" /><br><br><br>
-<a href="../public/createAccount.php">Create Account</a>
 </form>
 <?php }else{?>
-  <div class="title">
-    <h1> Welcome <?=$_SESSION['username']?></h1>
+    <div class="title">
+    <h1> Welcome [username]</h1>
   </div>
-  <ul class="admin">
+
+
+
+    <ul class="admin">
       <li class="products">
-      <a href="../public/account.php">
+      <a href="/admin/products.php">
 
-        <h1>account</h1>
+        <h1>Products</h1>
 
       </a>
       </li>
-      <a href="../public/orders.php">
+      <a href="../admin/createAdmin.php">
       <li class="users">
-      <h1>orders</h1>
+      <h1>Create Staff</h1>
       </li>
       </a>
 
-      <a href="../public/login.php?action=signout">
+      <a href="../public/orders.php">
       <li class="orders">
+        <h1>Orders</h1>
+      </li>
+      </a>
+
+      <a href="../admin/admin.php?action=signout">
+      <li class="vacant">
         <h1>signout</h1>
       </li>
       </a>
@@ -59,6 +68,5 @@ if (!empty($_GET["action"])) {
     break;
   }
 }
-
 ?>
 
