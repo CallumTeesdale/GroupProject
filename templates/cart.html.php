@@ -7,7 +7,7 @@
 
         <?php
  //var_dump($_SESSION["cart_item"]);
-		if (isset($_SESSION["cart_item"])) {
+		if (isset($_SESSION["cart_item"]) && isset($_SESSION["customer_id"])) {
 			$total_quantity = 0;
 			$total_price = 0;
 			?>
@@ -57,13 +57,17 @@
         </a>
         <?php
 
-	} else {
+	} elseif(isset($_SESSION["cart_item"])&& !isset($_SESSION["customer_id"])) {
 		?>
         <div class="emptyCart">
-            <h1>Your Cart is Empty</h1>
+            <h1>You must be logged in to checkout</h1>
         </div>
         <?php 
-	}
+	}else{?>
+         <div class="emptyCart">
+            <h1>Empty Cart</h1>
+        </div>
+    <?php }
 	?>
     </div>
 </div>

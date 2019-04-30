@@ -24,56 +24,57 @@ else {
 <div class="addFormWrapper">
   <div class="addFormTextWrapper">
     <div class="addForm">
+      <div class="addFormWrap">
 <form action="" method="POST" enctype="multipart/form-data">
 	<label>Game Title:</label>
-	<input type="text" name="product[game_title]" /><br><br>
+	<input type="text" name="product[game_title]" />
 
   <label>Game Description:</label>
-  <textarea name="product[game_description]" rows="5" cols="40"></textarea><br><br>
+  <textarea name="product[game_description]" rows="5" cols="40"></textarea>
 
   <label>Game Text:</label>
-  <textarea name="product[game_text]" rows="5" cols="40"></textarea><br><br>
+  <textarea name="product[game_text]" rows="5" cols="40"></textarea>
 
   <label>Age Rating:</label>
+  <label>3+
   <input type="radio" name="product[age_rating]"
-    <?php if (isset($age_rating) && $age_rating=="female") echo "checked";?>
-        value="3+">3+
-  <input type="radio" name="product[age_rating]"
-    <?php if (isset($age_rating) && $age_rating=="male") echo "checked";?>
-        value="7+">7+
-  <input type="radio" name="product[age_rating]"
-    <?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>
-        value="12+">12+
-  <input type="radio" name="product[age_rating]"
-    <?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>
-        value="18+">15+
-  <input type="radio" name="product[age_rating]"
-    <?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>
-        value="18+">18+
-<br><br>
+    <?php if (isset($age_rating) && $age_rating=="other") echo "checked";?> value="3+">
+      </label>
+      <label>7+
+  <input type="radio" name="product[age_rating]"<?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>value="7+">
+        </label>
+      <label>12+
+  <input type="radio" name="product[age_rating]" <?php if (isset($age_rating) && $age_rating=="other") echo "checked";?> value="12+">
+        </label>
+        <label>16+
+  <input type="radio" name="product[age_rating]"<?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>value="18+">
+        </label>
+        <label>18+
+  <input type="radio" name="product[age_rating]"<?php if (isset($age_rating) && $age_rating=="other") echo "checked";?>value="18+">
+  </label>
 
 <label>Price:</label>
-<input type="text" name="product[price]" /><br><br>
+<input type="text" name="product[price]" />
 
 <label>Platform:</label>
-<input type="text" name="product[platform]" /><br><br>
+<input type="text" name="product[platform]" />
 
 <label>Publisher:</label>
-<input type="text" name="product[publisher]" /><br><br>
+<input type="text" name="product[publisher]" />
 
 <label>Developer:</label>
-<input type="text" name="product[developer]" /><br><br>
+<input type="text" name="product[developer]" />
 
 <label>Release Date:</label>
 <input type="date" id="start" name="product[release_date]"
        value="2019-01-01"
-       min="2000-01-01" max="2022-12-31"><br><br>
+       min="2000-01-01" max="2022-12-31">
 
 <label>Metacritic Score:</label>
-<input type="text" name="product[metacritic_score]" /><br><br>
+<input type="text" name="product[metacritic_score]" />
 
 <label>Quantity:</label>
-<input type="text" name="product[quantity]" /><br><br>
+<input type="text" name="product[quantity]" />
 
 <label>Trailer Link:</label>
 <input type="text" name="product[trailer_link]" /><br><br>
@@ -87,6 +88,7 @@ else {
 
 	<input type="submit" name="submit" value="Add" />
 </form>
+</div>
 </div>
 </div>
 </div>

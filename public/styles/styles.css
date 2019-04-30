@@ -266,22 +266,17 @@ nav a:hover {
   border-width: thin;
   border-radius: 5px;
 }
-form.form input.text, form.form textarea.standard, form.form select, form.form input.date { 
-  background-color:#F1F1F1;
-  border:solid 1px #7DD2F1;
-  font-size:13px;
-  color:#000000;
-  -moz-border-radius:0px;
-  -webkit-border-radius:0px;
-  border-radius:0px;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:5px;
-  padding-right:5px;
+.addFormWrap{
+  height:100%;
 }
+.addFormWrap form, form select, form label, form input, form textarea {width: 200px; padding: 10px; margin-top: 20px;}
+.addFormWrap form label {clear: left;}
+.addFormWrap textarea {height: 100px; width: auto;}
+.addFormWrap form input[type="text"], form input[type="password"], textarea {color: #999; font-family: verdana, sans-serif}
+.addFormWrap input[type="submit"] {clear: both; margin-left: 220px; width: 220px;}
 
 /**
- * Search page styling
+ * Search page styling=
  */
 .searchWrapper {
   padding-top: 93px;
