@@ -16,8 +16,8 @@ $games->execute();
                                                         
                                                 </div>
                                             </div>
-                                            <form method="post" action="game.php?action=add&code=<?= $game['code'] ?>">
-                                                        <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" hidden /><input type="submit" value="Add to Cart" class="btnAddAction" />
+                                            <form method="post" action="game.php?action=add&code=<?= $game['code'] ?>"></form>
+                                            <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" hidden /><input type="submit" value="Add to Cart" class="btnAddAction" /></div>
 
                                             <button onclick="myFunction('More')" class="g-button block black">More</button>
                                             <div id="More" class="hide accordion-container">
@@ -37,7 +37,7 @@ $games->execute();
                                             <button onclick="myFunction('Specifics')" class="g-button block black">Specifics</button>
                                             <div id="Specifics" class="hide accordion-container">
                                             <p><strong>Publisher: </strong><?= $game['publisher'] ?></p>   
-                                            <p><strong>Publisher: </strong><?= $game['developer'] ?></p>                                                           
+                                            <p><strong>Developer: </strong><?= $game['developer'] ?></p>                                                           
                                             </div>
 
                                              </div>
